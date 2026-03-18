@@ -3,13 +3,13 @@
 
 int main() {
 
-    char str[] = " ";
+    char str[80];
     int i;
 
     printf("Enter the string (up to 80 characters): ");
     scanf("%80s", &str);
 
-    printf("%s \n", str);
+    printf("Entered string: %s \n", str);
 
 
     for (int i = 0; i < strlen(str); i++)
@@ -24,7 +24,7 @@ int main() {
         }
     }
 
-    printf("%s \n", str);
+    printf("The result: %s \n", str);
 
 
 
