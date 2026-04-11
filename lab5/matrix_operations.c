@@ -2,17 +2,18 @@
 #include <stdlib.h>
 #include "matrix_operations.h"
 
-int **sum(double **Matrix1, double **Matrix2, double size) {
+double **sum(double **Matrix1, double **Matrix2, int size) {
     
     double **ResultMatrix;
-
+    int i, j;
+    
     ResultMatrix = (double**)malloc(size * sizeof(double*));
-    for (int i = 0; i < size; i++) {
+    for (i = 0; i < size; i++) {
         ResultMatrix[i] = (double*)malloc(size*sizeof(double));
     }
 
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
             ResultMatrix[i][j] = Matrix1[i][j] + Matrix2[i][j];
         }
     }
@@ -22,17 +23,18 @@ int **sum(double **Matrix1, double **Matrix2, double size) {
 
 
 
-int **substract(double **Matrix1, double **Matrix2, double size) {
+double **substract(double **Matrix1, double **Matrix2, int size) {
 
     double **ResultMatrix;
+    int i, j;
 
     ResultMatrix = (double**)malloc(size * sizeof(double*));
-    for (int i = 0; i < size; i++) {
+    for (i = 0; i < size; i++) {
         ResultMatrix[i] = (double*)malloc(size*sizeof(double));
     }
 
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
             ResultMatrix[i][j] = Matrix1[i][j] - Matrix2[i][j];
         }
     }
@@ -42,19 +44,20 @@ int **substract(double **Matrix1, double **Matrix2, double size) {
 
 
 
-int **multiply(double **Matrix1, double **Matrix2, double size) {
+double **multiply(double **Matrix1, double **Matrix2, int size) {
 
     double **ResultMatrix;
+    int i, j, k;
 
     ResultMatrix = (double**)malloc(size * sizeof(double*));
-    for (int i = 0; i < size; i++) {
+    for (i = 0; i < size; i++) {
         ResultMatrix[i] = (double*)malloc(size*sizeof(double));
     }
 
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
             ResultMatrix[i][j] = 0;
-            for (int k = 0; k < size; k++) {
+            for (k = 0; k < size; k++) {
                 ResultMatrix[i][j] += Matrix1[i][k] + Matrix2[k][j];
             }
         }
