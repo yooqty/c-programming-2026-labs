@@ -1,0 +1,10 @@
+#ifndef MATRIX_OPS_H
+#define MATRIX_OPS_H
+
+double **sum(double **Matrix1, double **Matrix2, int size);
+
+double **substract(double **Matrix1, double **Matrix2, int size);
+
+double **multiply(double **Matrix1, double **Matrix2, int size);
+
+#endif
