@@ -2,15 +2,25 @@
 #include <stdlib.h>
 #include "matrix_operations.h"
 
+double **DSize(int size) {
+	
+	double **ResultMatrix;
+	int i;
+	
+	ResultMatrix = (double**)malloc(size * sizeof(double*));
+    for (i = 0; i < size; i++) {
+        ResultMatrix[i] = (double*)malloc(size*sizeof(double));
+    }
+    return ResultMatrix;
+}
+	
+
 double **sum(double **Matrix1, double **Matrix2, int size) {
     
     double **ResultMatrix;
     int i, j;
     
-    ResultMatrix = (double**)malloc(size * sizeof(double*));
-    for (i = 0; i < size; i++) {
-        ResultMatrix[i] = (double*)malloc(size*sizeof(double));
-    }
+	DSize(size);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
@@ -64,3 +74,17 @@ double **multiply(double **Matrix1, double **Matrix2, int size) {
     }
     return ResultMatrix;
 }
+
+void printm(double **yu, int size) {
+	
+	int i,j,k;
+	
+        for (i = 0; i < size; i++) {
+            for (j = 0; j < size; j++) {
+                printf("%0.2lf ", yu[i][j]);
+            }
+         printf("\n");       
+        }
+    }
+    
+

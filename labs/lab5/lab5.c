@@ -23,6 +23,10 @@ int main() {
         Matrix2[i] = (double*)malloc(size * sizeof(double));
     }
 
+    double **r = (double**)malloc(size * sizeof(double*));
+    for (i = 0; i < size; i++) {
+        r[i] = (double*)malloc(size * sizeof(double));
+    }
 
 
 
@@ -46,38 +50,23 @@ int main() {
 
     printf("Enter the operation(+,-,*): ");
     scanf(" %c", &operation);
+    
+    
+	if (operation=='+'){
+		r = sum(Matrix1,Matrix2,size);
+		printm(r,size);
+	}
+	
+	if (operation=='-'){
+		r = substract(Matrix1,Matrix2,size);
+		printm(r,size);
+	}
+	
+	if (operation=='*'){
+		r = multiply(Matrix1,Matrix2,size);
+		printm(r,size);
+	}
 
-
-
-
-    if (operation == '+') {
-        double **ResultMatrix = sum(Matrix1,Matrix2,size);
-        printf("Result: \n");
-        for (i = 0; i < size; i++) {
-            for (j = 0; j < size; j++) {
-                printf("%0.2lf ", ResultMatrix[i][j]);
-            }
-         printf("\n");       
-        }
-    }
-
-    if (operation == '-') {
-        double **ResultMatrix = substract(Matrix1,Matrix2,size);
-        for (i = 0; i < size; i++) {
-            for (j = 0; j < size; i++) {
-                printf("%0.2lf", ResultMatrix[i][j]);
-            }
-        }
-    }
-
-    if (operation == '*') {
-        double **ResultMatrix = multiply(Matrix1,Matrix2,size);
-        for (i = 0; i < size; i++) {
-            for (j = 0; j < size; j++) {
-                printf("%0.2lf", ResultMatrix[i][j]);
-            }
-        }
-    }
 
     return 0;
 }

@@ -7,4 +7,6 @@ double **substract(double **Matrix1, double **Matrix2, int size);
 
 double **multiply(double **Matrix1, double **Matrix2, int size);
 
+void printm(double **yu, int size);
+
 #endif
