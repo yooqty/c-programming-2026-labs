@@ -18,9 +18,9 @@ double **DSize(int size) {
 double **sum(double **Matrix1, double **Matrix2, int size) {
     
     double **ResultMatrix;
-    int i, j;
+    int i, j, n;
     
-	DSize(size);
+	double** mat = DSize(n);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
@@ -36,12 +36,9 @@ double **sum(double **Matrix1, double **Matrix2, int size) {
 double **substract(double **Matrix1, double **Matrix2, int size) {
 
     double **ResultMatrix;
-    int i, j;
+    int i, j, n;
 
-    ResultMatrix = (double**)malloc(size * sizeof(double*));
-    for (i = 0; i < size; i++) {
-        ResultMatrix[i] = (double*)malloc(size*sizeof(double));
-    }
+    double** mat = DSize(n);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
@@ -57,12 +54,9 @@ double **substract(double **Matrix1, double **Matrix2, int size) {
 double **multiply(double **Matrix1, double **Matrix2, int size) {
 
     double **ResultMatrix;
-    int i, j, k;
+    int i, j, k, n;
 
-    ResultMatrix = (double**)malloc(size * sizeof(double*));
-    for (i = 0; i < size; i++) {
-        ResultMatrix[i] = (double*)malloc(size*sizeof(double));
-    }
+    double** mat = DSize(n);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
