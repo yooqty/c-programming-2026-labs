@@ -20,7 +20,7 @@ double **sum(double **Matrix1, double **Matrix2, int size) {
     double **ResultMatrix;
     int i, j, n;
     
-	double** mat = DSize(n);
+	ResultMatrix = DSize(n);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
@@ -38,7 +38,7 @@ double **substract(double **Matrix1, double **Matrix2, int size) {
     double **ResultMatrix;
     int i, j, n;
 
-    double** mat = DSize(n);
+    ResultMatrix = DSize(n);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
@@ -56,7 +56,7 @@ double **multiply(double **Matrix1, double **Matrix2, int size) {
     double **ResultMatrix;
     int i, j, k, n;
 
-    double** mat = DSize(n);
+    ResultMatrix = DSize(n);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {

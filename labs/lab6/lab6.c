@@ -9,7 +9,7 @@ int main() {
     int year;
 
     while (fscanf(femboys, "%s %s %s %d", ln, n, fn, &year) == 4) {
-        if ( year > 1980) {
+        if ( year > 1980 && strncmp(ln, "Петров", 6) == 0) {
             fprintf(futanari, "%s %s %s %d\n", ln, n, fn, year);
         }
     }
