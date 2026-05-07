@@ -67,6 +67,10 @@ int main() {
 		printm(r,size);
 	}
 
+    free(Matrix1);
+    free(Matrix2);
+    free(r);
+
 
     return 0;
 }
