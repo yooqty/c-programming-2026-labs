@@ -12,8 +12,14 @@ int main() {
     int i, j;
     humen temp;
 
-
-
+    FILE *file = fopen("humen.txt", "r");
+    for (i=0; i<count; i++) {
+        fscanf(file, "%s", a[i].n);
+        fscanf(file, "%s", a[i].fn);
+        fscanf(file, "%s", a[i].ln);
+        fscanf(file, "%d", a[i].n);
+    }
+    fclose(file);
 
     return 0;
 }
