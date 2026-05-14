@@ -25,5 +25,15 @@ int main() {
         b[i] = a[i];
     }
 
+    for (i=0; i<cnt; i++) {
+        for (j=0; j<cnt; j++) {
+            if (b[j].year > b[j+1].year) {
+                temp = b[j];
+                b[j] = b[j+1];
+                b[j+1] = temp;
+            }
+        }
+    }
+
     return 0;
 }
