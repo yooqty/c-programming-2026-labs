@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define cnt 50
+#define cnt 20
 
 typedef struct {
     char n[50], fn[50], ln[50];
