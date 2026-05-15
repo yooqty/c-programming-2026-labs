@@ -10,7 +10,7 @@ typedef struct {
 int main() {
     humen a[cnt], b[cnt];
     int i, j;
-    humen temp;
+    humen t;
 
     FILE *file = fopen("humen.txt", "r");
     for (i=0; i<cnt; i++) {
@@ -28,9 +28,9 @@ int main() {
     for (i=0; i<cnt-1; i++) {
         for (j=0; j<cnt-1; j++) {
             if (b[j].year > b[j+1].year) {
-                temp = b[j];
+                t = b[j];
                 b[j] = b[j+1];
-                b[j+1] = temp;
+                b[j+1] = t;
             }
         }
     }
