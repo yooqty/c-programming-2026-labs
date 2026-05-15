@@ -17,7 +17,7 @@ int main() {
         fscanf(file, "%s", a[i].n);
         fscanf(file, "%s", a[i].fn);
         fscanf(file, "%s", a[i].ln);
-        fscanf(file, "%d", a[i].year);
+        fscanf(file, "%d", &a[i].year);
     }
     fclose(file);
 
