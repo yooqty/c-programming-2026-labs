@@ -35,5 +35,9 @@ int main() {
         }
     }
 
+    for (i=0; i<cnt; i++) {
+        printf("%s %s %s, %d\n", b[i].n, b[i].fn, b[i].ln, b[i].year);
+    }
+
     return 0;
 }
