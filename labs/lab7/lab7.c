@@ -25,8 +25,8 @@ int main() {
         b[i] = a[i];
     }
 
-    for (i=0; i<cnt; i++) {
-        for (j=0; j<cnt; j++) {
+    for (i=0; i<cnt-1; i++) {
+        for (j=0; j<cnt-1; j++) {
             if (b[j].year > b[j+1].year) {
                 temp = b[j];
                 b[j] = b[j+1];
