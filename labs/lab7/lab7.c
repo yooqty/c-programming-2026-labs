@@ -1,25 +1,37 @@
 #include <stdio.h>
 
-#define cnt 12
-
 typedef struct {
     char n[50], fn[50], ln[50];
     int year;
 } humen;
 
 int main() {
+	
+	int cnt = 0;
+	char buff[256];
+	FILE *file = fopen("humen.txt", "r");
+	while (fgets(buff, sizeof(buff), file) != NULL)
+	{
+        if (strlen(buff) > 1) 
+		{
+            cnt++;
+        }
+    }
+	fclose(file);
+	
+	
     humen a[cnt], b[cnt];
     int i, j;
     humen t;
 
-    FILE *file = fopen("humen.txt", "r");
+    FILE *file2 = fopen("humen.txt", "r");
     for (i=0; i<cnt; i++) {
+        fscanf(file, "%s", a[i].ln);
         fscanf(file, "%s", a[i].n);
         fscanf(file, "%s", a[i].fn);
-        fscanf(file, "%s", a[i].ln);
         fscanf(file, "%d", &a[i].year);
     }
-    fclose(file);
+    fclose(file2);
 
     for (i=0; i<cnt; i++) {
         b[i] = a[i];
@@ -36,7 +48,9 @@ int main() {
     }
 
     for (i=0; i<cnt; i++) {
-        printf("%s %s %s, %d\n", b[i].n, b[i].fn, b[i].ln, b[i].year);
+    	if (strncmp(b[i].ln, "Петров", 6) == 0) {
+    		printf("%s %s %s, %d\n", b[i].ln, b[i].n, b[i].fn, b[i].year);
+		}
     }
 
     return 0;

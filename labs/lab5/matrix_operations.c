@@ -20,7 +20,7 @@ double **sum(double **Matrix1, double **Matrix2, int size) {
     double **ResultMatrix;
     int i, j, n;
     
-	ResultMatrix = DSize(n);
+	ResultMatrix = DSize(size);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
@@ -79,6 +79,6 @@ void printm(double **yu, int size) {
             }
          printf("\n");       
         }
-    }
+}
     
 

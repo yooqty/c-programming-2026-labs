@@ -66,7 +66,15 @@ int main() {
 		r = multiply(Matrix1,Matrix2,size);
 		printm(r,size);
 	}
+	
 
+	
+	for (i=0; i<size; i++) {
+		free(r[i]);
+		free(Matrix1[i]);
+		free(Matrix2[i]);
+	}
+	printf("ok");	
     free(Matrix1);
     free(Matrix2);
     free(r);
