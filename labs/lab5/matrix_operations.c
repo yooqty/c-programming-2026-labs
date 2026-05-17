@@ -18,7 +18,7 @@ double **DSize(int size) {
 double **sum(double **Matrix1, double **Matrix2, int size) {
     
     double **ResultMatrix;
-    int i, j, n;
+    int i, j;
     
 	ResultMatrix = DSize(size);
 
@@ -36,9 +36,9 @@ double **sum(double **Matrix1, double **Matrix2, int size) {
 double **substract(double **Matrix1, double **Matrix2, int size) {
 
     double **ResultMatrix;
-    int i, j, n;
+    int i, j;
 
-    ResultMatrix = DSize(n);
+    ResultMatrix = DSize(size);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
@@ -54,9 +54,9 @@ double **substract(double **Matrix1, double **Matrix2, int size) {
 double **multiply(double **Matrix1, double **Matrix2, int size) {
 
     double **ResultMatrix;
-    int i, j, k, n;
+    int i, j, k;
 
-    ResultMatrix = DSize(n);
+    ResultMatrix = DSize(size);
 
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
