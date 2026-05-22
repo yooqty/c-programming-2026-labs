@@ -39,3 +39,10 @@ int compare_fields(const void * a, const void * b) {
     }
     return 0;
 }
+
+int main() {
+
+
+
+    return 0;
+}
