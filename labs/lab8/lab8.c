@@ -41,6 +41,18 @@ int compare_fields(const void * a, const void * b) {
 }
 
 int main() {
+    FILE *f = fopen("femboys.txt", "r");
+    person people[100];
+
+    int cunt=0;
+    char ln[50], fn[50];
+    while (fscanf(f, " %s %s %d %s %f", ln, fn, & people[cunt].year, people[cunt].g, & people[cunt].h) == 5) {
+        sprinf(people[cnt].n, "%s %s", ln, fn);
+        cunt++;
+    }
+    fclose(f);
+    
+
 
 
 
