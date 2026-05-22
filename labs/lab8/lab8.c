@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 typedef struct {
     char n[50];
@@ -47,23 +49,58 @@ int main() {
     int count=0;
     char ln[50], fn[50];
     while (fscanf(f, " %s %s %d %s %f", ln, fn, & people[count].year, people[count].g, & people[count].h) == 5) {
-        sprinf(people[count].n, "%s %s", ln, fn);
+        sprintf(people[count].n, "%s %s", ln, fn);
         count++;
     }
     fclose(f);
     
-    printf("Sort by: n(name/last name), y(birth year), g(gender), h(height)\n");
+    printf("Sort by: n(name/last name), y(birth year), g(gender), h(height)\n1 character per line\n(type q to quit)\n");
     cnt=0;
-    int input;
-    while (scanf("%d", & input)==1 && input!=0 && cnt<10) {
-        sf[cnt++] = input;
+    int pr;
+    pr=1;
+    char input;
+    
+    while (cnt<10) {
+    	printf("Sort priority %d: ", pr++);
+    	scanf(" %c", &input);
+    	
+    	if (input == 'q' || input == 'Q') {
+    		break;
+		}
+		
+		int fld = 0;
+		switch(input) {
+			case 'n': case 'N': fld = 1; break;
+			case 'y': case 'Y': fld = 2; break;
+			case 'g': case 'G': fld = 3; break;
+			case 'h': case 'H': fld = 4; break;
+			default:
+				printf("Invalid input!\n");
+				continue;	
+		}
+		
+		sf[cnt++] = fld;
+	}
+	
+	printf("Femboys sorted by priority: ");
+	int i;
+    for (i = 0; i < cnt; i++) {
+        char c;
+        switch(sf[i]) {
+            case 1: c = 'n'; break;
+            case 2: c = 'y'; break;
+            case 3: c = 'g'; break;
+            case 4: c = 'h'; break;
+        }
+        printf("%c ", c);
     }
+    printf("\n");
+    
     qsort(people, count, sizeof(person), compare_people);
 
     FILE *f2 = fopen("sorted_femboys.txt", "w");
-    int i;
     for (i=0; i<count; i++) {
-        fprintf(f2, "%-20s %4d %s %.2f\n", people[i].name, people[i].year, people[i].g, people[i].h );
+        fprintf(f2, "%-20s %4d %s %.2f\n", people[i].n, people[i].year, people[i].g, people[i].h );
     }
     fclose(f2);
     
