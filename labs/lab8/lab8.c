@@ -60,7 +60,12 @@ int main() {
     }
     qsort(people, count, sizeof(person), compare_people);
 
-
-
+    FILE *f2 = fopen("sorted_femboys.txt", "w");
+    int i;
+    for (i=0; i<count; i++) {
+        fprintf(f2, "%-20s %4d %s %.2f\n", people[i].name, people[i].year, people[i].g, people[i].h );
+    }
+    fclose(f2);
+    
     return 0;
 }
