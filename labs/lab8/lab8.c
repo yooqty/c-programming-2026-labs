@@ -51,9 +51,17 @@ int main() {
     }
 
     FILE *f = fopen("femboys.txt", "r");
-    person people[100];
-
+    person *people;
+    int capacity = 100;
     int count=0;
+
+    people = (person*)malloc(capacity * sizeof(person));
+    if (people == NULL) {
+        printf("Memory allocation error!\n");
+        free(sf);
+        return 1;
+    }
+
     char ln[50], fn[50];
     while (fscanf(f, " %s %s %d %s %f", ln, fn, & people[count].year, people[count].g, & people[count].h) == 5) {
         sprintf(people[count].n, "%s %s", ln, fn);
