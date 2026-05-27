@@ -9,7 +9,8 @@ typedef struct {
     float h;
 } person;
 
-int sf[10];
+int *sf;
+int sf_capacity = 10;
 int cnt=0;
 
 int compare_people(const void * a, const void * b) {
@@ -43,6 +44,12 @@ int compare_people(const void * a, const void * b) {
 }
 
 int main() {
+    sf = (int*)malloc(sf_capacity * sizeof(int));
+    if (sf == NULL) {
+        printf("Memory allocation error!\n");
+        return 1;
+    }
+
     FILE *f = fopen("femboys.txt", "r");
     person people[100];
 
