@@ -12,7 +12,10 @@
 })
 
 int main() {
-
+    char input[10000];
+    int numbers[1000];
+    int count = 0;
+    
 
 
 
