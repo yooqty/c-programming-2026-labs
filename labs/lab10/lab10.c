@@ -22,6 +22,9 @@ int main() {
         return 1;
     }
 
+    char *wlw = strtok(input, " \n");
+    
+
 
 
     return 0;
