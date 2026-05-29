@@ -16,6 +16,11 @@ int main() {
     int numbers[1000];
     int count = 0;
     
+    printf(" Enter the numbers: ");
+    if (fgets(input, sizeof(input), stdin) == NULL) {
+        printf(" Input error!");
+        return 1;
+    }
 
 
 
