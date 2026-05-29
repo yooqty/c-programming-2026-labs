@@ -30,7 +30,8 @@ int main() {
         wlw = strtok(NULL, " \n");
     }
 
-
+    int max = MAX(numbers,cnt);
+    printf(" Max number: %d", max);
 
     return 0;
 }
