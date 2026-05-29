@@ -14,7 +14,7 @@
 int main() {
     char input[10000];
     int numbers[1000];
-    int count = 0;
+    int cnt = 0;
     
     printf(" Enter the numbers: ");
     if (fgets(input, sizeof(input), stdin) == NULL) {
@@ -23,7 +23,12 @@ int main() {
     }
 
     char *wlw = strtok(input, " \n");
-    
+    while (wlw != NULL && cnt < 1000) {
+        int num = atoi(wlw);
+        numbers[cnt] = num;
+        cnt++;
+        wlw = strtok(NULL, " \n");
+    }
 
 
 
