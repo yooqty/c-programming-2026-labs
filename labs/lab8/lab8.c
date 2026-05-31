@@ -45,7 +45,7 @@ int compare_people(const void * a, const void * b) {
 int main() {
     FILE *f = fopen("femboys.txt", "r");
     person *people;
-    int capacity = 100;
+    int capacity = 0;
     int count=0;
 
     char buff[256];
@@ -53,7 +53,7 @@ int main() {
 	{
         if (strlen(buff) > 1) 
 		{
-            count++;
+            capacity++;
         }
     }
 
