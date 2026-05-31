@@ -43,18 +43,21 @@ int compare_people(const void * a, const void * b) {
 }
 
 int main() {
-
     FILE *f = fopen("femboys.txt", "r");
     person *people;
     int capacity = 100;
     int count=0;
 
-    people = (person*)malloc(capacity * sizeof(person));
-    if (people == NULL) {
-        printf("Memory allocation error!\n");
-        free(sf);
-        return 1;
+    char buff[256];
+    while (fgets(buff, sizeof(buff), f))
+	{
+        if (strlen(buff) > 1) 
+		{
+            count++;
+        }
     }
+
+    people = (person*)malloc(capacity * sizeof(person));
 
     char ln[50], fn[50];
     while (fscanf(f, " %s %s %d %s %f", ln, fn, & people[count].year, people[count].g, & people[count].h) == 5) {
