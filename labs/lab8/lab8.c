@@ -46,7 +46,6 @@ int main() {
     FILE *f = fopen("femboys.txt", "r");
     person *people;
     int capacity = 0;
-    int count=0;
 
     char buff[256];
     while (fgets(buff, sizeof(buff), f))
@@ -61,6 +60,7 @@ int main() {
 
     rewind(f);
 
+    int count=0;
     char ln[50], fn[50];
     while (fscanf(f, " %s %s %d %s %f", ln, fn, & people[count].year, people[count].g, & people[count].h) == 5) {
         sprintf(people[count].n, "%s %s", ln, fn);
