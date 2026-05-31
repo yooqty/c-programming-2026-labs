@@ -59,6 +59,8 @@ int main() {
 
     people = (person*)malloc(capacity * sizeof(person));
 
+    rewind(f);
+
     char ln[50], fn[50];
     while (fscanf(f, " %s %s %d %s %f", ln, fn, & people[count].year, people[count].g, & people[count].h) == 5) {
         sprintf(people[count].n, "%s %s", ln, fn);
