@@ -32,3 +32,20 @@ int max(int n, ...) {
     va_end(list);
     return res;
 }
+
+int min(int n, ...) {
+    int res = INT_MAX;
+    va_list list;
+    va_start(list, n);
+    while(n)
+    {
+        int max = va_arg(list, int);
+        if (max < res)
+        {
+            res = max;
+        }
+        --n;
+    }
+    va_end(list);
+    return res;
+}
