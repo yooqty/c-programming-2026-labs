@@ -49,3 +49,18 @@ int min(int n, ...) {
     va_end(list);
     return res;
 }
+
+int average(int n, ...) {
+    int res = 0;
+    int count = n;
+    va_list list;
+    va_start(list, n);
+    while(n)
+    {
+        res += va_arg(list, int);
+        --n;
+    }
+    //int ress = res/n;
+    va_end(list);
+    return (int)res/count;
+}
