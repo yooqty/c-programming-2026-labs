@@ -2,27 +2,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <float.h>
 
-int sum(int n, ...) {
-    int res = 0;
+double sum(int n, ...) {
+    double res = 0;
     va_list list;
     va_start(list, n);
     while(n)
     {
-        res += va_arg(list, int);
+        res += va_arg(list, double);
         --n;
     }
     va_end(list);
     return res;
 }
 
-int max(int n, ...) {
-    int res = INT_MIN;
+double max(int n, ...) {
+    double res = -DBL_MAX;
     va_list list;
     va_start(list, n);
     while(n)
     {
-        int max = va_arg(list, int);
+        double max = va_arg(list, double);
         if (max > res)
         {
             res = max;
@@ -33,13 +34,13 @@ int max(int n, ...) {
     return res;
 }
 
-int min(int n, ...) {
-    int res = INT_MAX;
+double min(int n, ...) {
+    double res = DBL_MAX;
     va_list list;
     va_start(list, n);
     while(n)
     {
-        int max = va_arg(list, int);
+        double max = va_arg(list, double);
         if (max < res)
         {
             res = max;
@@ -50,17 +51,17 @@ int min(int n, ...) {
     return res;
 }
 
-int average(int n, ...) {
-    int res = 0;
-    int count = n;
+double average(int n, ...) {
+    double res = 0;
+    double count = n;
     va_list list;
     va_start(list, n);
     while(n)
     {
-        res += va_arg(list, int);
+        res += va_arg(list, double);
         --n;
     }
     //int ress = res/n;
     va_end(list);
-    return (int)res/count;
+    return (double)res/count;
 }
