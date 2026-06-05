@@ -3,6 +3,8 @@
 #include <signal.h>
 #include <unistd.h>
 
+/*Написать программу подсчитывающая количество битов, выставленных в единицу у числа типа long и double. Сами значения чисел вводятся с клавиатуры.*/
+
 void handler(int sig)
 {
     if (sig == SIGABRT)
