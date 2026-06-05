@@ -61,7 +61,6 @@ double average(int n, ...) {
         res += va_arg(list, double);
         --n;
     }
-    //int ress = res/n;
     va_end(list);
     return (double)res/count;
 }
