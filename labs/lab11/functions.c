@@ -51,7 +51,7 @@ double min(int n, ...) {
     return res;
 }
 
-double average(int n, ...) {
+double avg(int n, ...) {
     double res = 0;
     double count = n;
     va_list list;
