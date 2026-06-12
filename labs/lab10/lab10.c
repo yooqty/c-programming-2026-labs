@@ -28,6 +28,7 @@ int main() {
     }
 
     int max = MAX(numbers,cnt);
+    double avg = AVG(numbers, cnt);
 
     printf("Max number: %d\n", max);
 
