@@ -1,12 +1,12 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-double sum(int n, ...);
+double sum(int cnt, ...);
 
-double max(int n, ...);
+double max(int cnt, ...);
 
-double min(int n, ...);
+double min(int cnt, ...);
 
-double avg(int n, ...);
+double avg(int cnt, ...);
 
 #endif
