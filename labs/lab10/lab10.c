@@ -29,19 +29,7 @@ int main() {
 
     int max = MAX(numbers,cnt);
 
-    int sum = 0;
-
-    for (int i = 0; i < cnt; i++) {
-        if (numbers[i] > max) {
-            max = numbers[i];
-        }
-        sum = sum + numbers[i];
-    }
-
-    double avg = (double)sum / cnt;
-
     printf("Max number: %d\n", max);
-    printf("Average number: %.2f\n", avg);
 
     return 0;
 }
