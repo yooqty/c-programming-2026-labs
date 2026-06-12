@@ -51,7 +51,7 @@ int main() {
     }
 
     for (i=0; i<cnt; i++) {
-    	if (strncmp(b[i].ln, "������", 6) == 0) {
+    	if (strncmp(b[i].ln, "Петров", 6) == 0) {
     		printf("%s %s %s, %d\n", b[i].ln, b[i].n, b[i].fn, b[i].year);
 		}
     }
