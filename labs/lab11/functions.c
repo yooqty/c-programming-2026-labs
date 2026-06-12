@@ -15,7 +15,7 @@ double sum(int cnt, ...) {
 
 double max(int cnt, ...) {
     va_list args;
-    double result = - DBL_MAX;
+    double result = -DBL_MAX;
     va_start(args, cnt);
     for (int i = 0; i < cnt; i++) {
         double current = va_arg(args, double);
