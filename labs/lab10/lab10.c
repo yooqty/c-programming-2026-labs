@@ -40,6 +40,7 @@ int main() {
     double avg = (double)sum / cnt;
 
     printf("Max number: %d\n", max);
+    printf("Average number: %.2f\n", avg);
 
     return 0;
 }
