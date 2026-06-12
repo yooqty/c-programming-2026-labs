@@ -29,10 +29,10 @@ int main() {
 
     FILE *file2 = fopen("humen.txt", "r");
     for (i=0; i<cnt; i++) {
-        fscanf(file, "%s", a[i].ln);
-        fscanf(file, "%s", a[i].n);
-        fscanf(file, "%s", a[i].fn);
-        fscanf(file, "%d", &a[i].year);
+        fscanf(file2, "%s", a[i].ln);
+        fscanf(file2, "%s", a[i].n);
+        fscanf(file2, "%s", a[i].fn);
+        fscanf(file2, "%d", &a[i].year);
     }
     fclose(file2);
 
