@@ -37,6 +37,8 @@ int main() {
         sum = sum + numbers[i];
     }
 
+    double avg = (double)sum / cnt;
+
     printf(" Max number: %d", max);
 
     return 0;
