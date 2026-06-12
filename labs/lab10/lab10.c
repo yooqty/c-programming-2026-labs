@@ -31,6 +31,7 @@ int main() {
     double avg = AVG(numbers, cnt);
 
     printf("Max number: %d\n", max);
+    printf("Average number: %.2f", avg);
 
     return 0;
 }
