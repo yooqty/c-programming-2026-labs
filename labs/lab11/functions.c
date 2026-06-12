@@ -1,66 +1,57 @@
-#include "functions.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <float.h>
+# include "functions.h"
+# include <stdarg.h>
+# include <float.h>
 
-double sum(int n, ...) {
-    double res = 0;
-    va_list list;
-    va_start(list, n);
-    while(n)
-    {
-        res += va_arg(list, double);
-        --n;
+double sum (int count, ...) {  //ф-ия для суммы
+    va_list args;
+    double result = 0.0;
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        result += va_arg(args, double);
     }
-    va_end(list);
-    return res;
+    va_end(args);
+    return result;
 }
 
-double max(int n, ...) {
-    double res = -DBL_MAX;
-    va_list list;
-    va_start(list, n);
-    while(n)
-    {
-        double max = va_arg(list, double);
-        if (max > res)
-        {
-            res = max;
+double max (int count, ...) {  // ф-ия для поиска max
+    va_list args;
+    double result = - DBL_MAX;
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        double current = va_arg(args, double); //current- текущей элемент
+        if (current > result) {
+            result = current;
         }
-        --n;
     }
-    va_end(list);
-    return res;
+    va_end(args);
+    return result;
 }
 
-double min(int n, ...) {
-    double res = DBL_MAX;
-    va_list list;
-    va_start(list, n);
-    while(n)
-    {
-        double max = va_arg(list, double);
-        if (max < res)
-        {
-            res = max;
+double min (int count, ...) {
+    va_list args;
+    double result = DBL_MAX;
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        double current = va_arg(args, double);
+        if (current < result) {
+            result = current;
         }
-        --n;
     }
-    va_end(list);
-    return res;
+    va_end(args);
+    return result;
 }
 
-double avg(int n, ...) {
-    double res = 0;
-    double count = n;
-    va_list list;
-    va_start(list, n);
-    while(n)
-    {
-        res += va_arg(list, double);
-        --n;
+double average (int count, ...) {
+    va_list args;
+    double total = 0.0; //total- суммы
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        total += va_arg(args, double);
     }
-    va_end(list);
-    return (double)res/count;
+    va_end(args);
+    if (count > 0) {
+        return (total / count);
+    } else {
+        return 0.0;
+    }
 }
