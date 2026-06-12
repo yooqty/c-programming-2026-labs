@@ -2,7 +2,7 @@
 # include <stdarg.h>
 # include <float.h>
 
-double sum(int cnt, ...) {  //ф-ия для суммы
+double sum(int cnt, ...) {
     va_list args;
     double result = 0.0;
     va_start(args, cnt);
@@ -13,12 +13,12 @@ double sum(int cnt, ...) {  //ф-ия для суммы
     return result;
 }
 
-double max(int cnt, ...) {  // ф-ия для поиска max
+double max(int cnt, ...) {
     va_list args;
     double result = - DBL_MAX;
     va_start(args, cnt);
     for (int i = 0; i < cnt; i++) {
-        double current = va_arg(args, double); //current- текущей элемент
+        double current = va_arg(args, double);
         if (current > result) {
             result = current;
         }
@@ -43,7 +43,7 @@ double min(int cnt, ...) {
 
 double avg(int cnt, ...) {
     va_list args;
-    double total = 0.0; //total- суммы
+    double total = 0.0;
     va_start(args, cnt);
     for (int i = 0; i < cnt; i++) {
         total += va_arg(args, double);
