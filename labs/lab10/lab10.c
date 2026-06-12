@@ -28,6 +28,15 @@ int main() {
 
     int max = MAX(numbers,cnt);
 
+    int sum = 0;
+
+    for (int i = 0; i < cnt; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+        sum = sum + numbers[i];
+    }
+
     printf(" Max number: %d", max);
 
     return 0;
