@@ -2,7 +2,7 @@
 # include <stdarg.h>
 # include <float.h>
 
-double sum (int count, ...) {  //ф-ия для суммы
+double sum(int count, ...) {  //ф-ия для суммы
     va_list args;
     double result = 0.0;
     va_start(args, count);
@@ -13,7 +13,7 @@ double sum (int count, ...) {  //ф-ия для суммы
     return result;
 }
 
-double max (int count, ...) {  // ф-ия для поиска max
+double max(int count, ...) {  // ф-ия для поиска max
     va_list args;
     double result = - DBL_MAX;
     va_start(args, count);
@@ -27,7 +27,7 @@ double max (int count, ...) {  // ф-ия для поиска max
     return result;
 }
 
-double min (int count, ...) {
+double min(int count, ...) {
     va_list args;
     double result = DBL_MAX;
     va_start(args, count);
@@ -41,7 +41,7 @@ double min (int count, ...) {
     return result;
 }
 
-double average (int count, ...) {
+double avg(int count, ...) {
     va_list args;
     double total = 0.0; //total- суммы
     va_start(args, count);
