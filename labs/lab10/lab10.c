@@ -39,7 +39,7 @@ int main() {
 
     double avg = (double)sum / cnt;
 
-    printf(" Max number: %d", max);
+    printf("Max number: %d\n", max);
 
     return 0;
 }
