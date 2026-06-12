@@ -6,6 +6,7 @@
 Использовать для этого макрос (без функции), на вход которому подается массив чисел и их количество.*/
 
 #define MAX(array, n) ({int max = (array)[0]; for (int i = 1; i < (n); i++) {if ((array)[i] > max) max = (array)[i];} max;})
+#define AVG(array, n) ({int sum = 0; for (int i = 0; i < (n); i++) {sum += (array)[i];} (double)sum / (n);})
 
 int main() {
     char input[10000];
