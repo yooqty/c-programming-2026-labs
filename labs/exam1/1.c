@@ -13,4 +13,16 @@ int days_until_date(int day, int month, int year) {
         return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
     }
 
+    int day_of_year(int d, int m, int y) {
+        int days = 0;
+        for (int i = 0; i < m - 1; i++) {
+            days += days_in_month[i];
+            if (i == 1 && is_leap(y)) days++;
+        }
+        days += d;
+        return days;
+    }
+
+
+
 }
