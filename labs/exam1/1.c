@@ -9,4 +9,8 @@ int days_until_date(int day, int month, int year) {
 
     int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+    int is_leap(int y) {
+        return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
+    }
+
 }
