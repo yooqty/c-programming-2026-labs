@@ -5,6 +5,6 @@
 
 int days_until_date(int day, int month, int year) {
 
+    int cur_day = 13, cur_month = 6, cur_year = 2026;
 
-    
 }
