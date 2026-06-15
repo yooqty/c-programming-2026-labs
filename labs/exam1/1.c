@@ -29,6 +29,10 @@ int days_until_date(int day, int month, int year) {
 
     int total_days = 0;
 
+    for (int y = cur_year; y < year; y++) {
+        total_days += 365 + is_leap(y);
+    }
+
 
 
 }
