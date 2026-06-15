@@ -23,6 +23,10 @@ int days_until_date(int day, int month, int year) {
         return days;
     }
 
+    if (year < cur_year || (year == cur_year && day_of_year(day, month, year) < day_of_year(cur_day, cur_month, cur_year))) {
+        return -1;
+    }
+
 
 
 }
