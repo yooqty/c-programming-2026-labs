@@ -27,6 +27,8 @@ int days_until_date(int day, int month, int year) {
         return -1;
     }
 
+    int total_days = 0;
+
 
 
 }
