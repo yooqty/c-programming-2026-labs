@@ -53,3 +53,13 @@ int** create_matrix(int m) {
     return mat;
 
 }
+
+int sum_matrix(int** mat, int m) {
+    int sum = 0;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            sum += mat[i][j];
+        }
+    }
+    return sum;
+}
