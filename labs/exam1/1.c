@@ -33,6 +33,8 @@ int days_until_date(int day, int month, int year) {
         total_days += 365 + is_leap(y);
     }
 
+    total_days -= day_of_year(cur_day, cur_month, cur_year);
+
 
 
 }
