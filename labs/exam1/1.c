@@ -44,6 +44,12 @@ int days_until_date(int day, int month, int year) {
 int** create_matrix(int m) {
 
     int** mat = (int**)malloc(m * sizeof(int*));
-
+    for (int i = 0; i < m; i++) {
+        mat[i] = (int*)malloc(m * sizeof(int));
+        for (int j = 0; j < m; j++) {
+            mat[i][j] = rand() % 10;
+        }
+    }
+    return mat;
 
 }
