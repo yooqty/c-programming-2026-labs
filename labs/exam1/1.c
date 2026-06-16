@@ -35,6 +35,8 @@ int days_until_date(int day, int month, int year) {
 
     total_days -= day_of_year(cur_day, cur_month, cur_year);
 
+    total_days += day_of_year(day, month, year);
+
 
 
 }
