@@ -40,3 +40,8 @@ int days_until_date(int day, int month, int year) {
     return total_days;
 
 }
+
+int** create_matrix(int m) {
+
+
+}
