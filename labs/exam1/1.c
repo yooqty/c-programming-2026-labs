@@ -43,5 +43,7 @@ int days_until_date(int day, int month, int year) {
 
 int** create_matrix(int m) {
 
+    int** mat = (int**)malloc(m * sizeof(int*));
+
 
 }
