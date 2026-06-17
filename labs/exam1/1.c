@@ -63,3 +63,14 @@ int sum_matrix(int** mat, int m) {
     }
     return sum;
 }
+
+void print_matrix_to_file(FILE* f, int** mat, int m, const char* name) {
+    fprintf(f, "%s:\n", name);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            fprintf(f, "%d ", mat[i][j]);
+        }
+        fprintf(f, "\n");
+    }
+    fprintf(f, "\n");
+}
