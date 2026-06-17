@@ -95,6 +95,12 @@ int main() {
     fscanf(input, "%d %d %d", &day, &month, &year);
     fclose(input);
 
+    int days_left = days_until_date(day, month, year);
+    if (days_left < 0) {
+        printf("Ошибка: дата должна быть в будущем (относительно 13.06.2026)\n");
+        return 1;
+    }
+
 
     return 0;
 }
