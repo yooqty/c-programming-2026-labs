@@ -101,6 +101,16 @@ int main() {
         return 1;
     }
 
+    printf("До даты %02d.%02d.%04d осталось дней: %d\n", day, month, year, days_left);
+
+    int m = 4;
+    printf("Размер матрицы m = %d\n", m);
+
+    int*** matrices = NULL;
+    int* sums = NULL;
+    int count = 0;
+    int found = 0;
+
 
     return 0;
 }
