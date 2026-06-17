@@ -112,5 +112,14 @@ int main() {
     int found = 0;
 
 
+    FILE* output = fopen("output.txt", "w");
+    if (!output) {
+        printf("Ошибка: не удалось создать output.txt\n");
+        return 1;
+    }
+
+    fprintf(output, "--- Результат работы программы ---\n");
+    fprintf(output, "До даты %02d.%02d.%04d осталось дней: %d\n\n", day, month, year, days_left);
+
     return 0;
 }
