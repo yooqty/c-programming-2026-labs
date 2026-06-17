@@ -79,3 +79,10 @@ void free_matrix(int** mat, int m) {
     for (int i = 0; i < m; i++) free(mat[i]);
     free(mat);
 }
+
+int main() {
+    clock_t start_time = clock();
+
+
+    return 0;
+}
