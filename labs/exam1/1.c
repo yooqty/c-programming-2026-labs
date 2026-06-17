@@ -85,6 +85,12 @@ int main() {
 
     srand(time(NULL));
 
+    FILE* input = fopen("input.txt", "r");
+    if (!input) {
+        printf("Ошибка: файл input.txt не найден!\n");
+        return 1;
+    }
+
 
     return 0;
 }
