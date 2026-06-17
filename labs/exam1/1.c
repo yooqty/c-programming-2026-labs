@@ -91,6 +91,10 @@ int main() {
         return 1;
     }
 
+    int day, month, year;
+    fscanf(input, "%d %d %d", &day, &month, &year);
+    fclose(input);
+
 
     return 0;
 }
