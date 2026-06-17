@@ -87,7 +87,7 @@ int main() {
 
     FILE* input = fopen("input.txt", "r");
     if (!input) {
-        printf("Ошибка: файл input.txt не найден!\n");
+        printf("Error: couldn't find input.txt.\n");
         return 1;
     }
 
@@ -97,14 +97,14 @@ int main() {
 
     int days_left = days_until_date(day, month, year);
     if (days_left < 0) {
-        printf("Ошибка: дата должна быть в будущем (относительно 13.06.2026)\n");
+        printf("Error: the date must be in the future (after 13.06.2026)\n");
         return 1;
     }
 
-    printf("До даты %02d.%02d.%04d осталось дней: %d\n", day, month, year, days_left);
+    printf("Until date %02d.%02d.%04d days left: %d\n", day, month, year, days_left);
 
     int m = 4;
-    printf("Размер матрицы m = %d\n", m);
+    printf("Size of the matrix m = %d\n", m);
 
     int*** matrices = NULL;
     int* sums = NULL;
@@ -114,21 +114,20 @@ int main() {
 
     FILE* output = fopen("output.txt", "w");
     if (!output) {
-        printf("Ошибка: не удалось создать output.txt\n");
+        printf("Error: couldn't create output.txt\n");
         return 1;
     }
 
-    fprintf(output, "--- Результат работы программы ---\n");
-    fprintf(output, "До даты %02d.%02d.%04d осталось дней: %d\n\n", day, month, year, days_left);
+    fprintf(output, "Until %02d.%02d.%04d days left: %d\n\n", day, month, year, days_left);
 
     while (!found) {
         int** new_mat = create_matrix(m);
         int new_sum = sum_matrix(new_mat, m);
         for (int i = 0; i < count; i++) {
             if (sums[i] == new_sum) {
-                fprintf(output, "Найдены две матрицы с одинаковой суммой элементов = %d\n\n", new_sum);
-                print_matrix_to_file(output, matrices[i], m, "Матрица 1");
-                print_matrix_to_file(output, new_mat, m, "Матрица 2");
+                fprintf(output, "Found 2 matrices with the same sum of elements = %d\n\n", new_sum);
+                print_matrix_to_file(output, matrices[i], m, "Matrix 1");
+                print_matrix_to_file(output, new_mat, m, "Matrix 2");
                 found = 1;
                 break;
             }
@@ -145,6 +144,16 @@ int main() {
     }
 
     fclose(output);
+
+    for (int i = 0; i < count; i++) {
+        free_matrix(matrices[i], m);
+    }
+    free(matrices);
+    free(sums);
+
+    clock_t end_time = clock();
+    double elapsed = (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("Time: %.6f секунд\n", elapsed);
 
     return 0;
 }
