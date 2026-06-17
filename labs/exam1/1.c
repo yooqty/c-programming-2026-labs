@@ -121,5 +121,22 @@ int main() {
     fprintf(output, "--- Результат работы программы ---\n");
     fprintf(output, "До даты %02d.%02d.%04d осталось дней: %d\n\n", day, month, year, days_left);
 
+    while (!found) {
+        int** new_mat = create_matrix(m);
+        int new_sum = sum_matrix(new_mat, m);
+        for (int i = 0; i < count; i++) {
+            if (sums[i] == new_sum) {
+                fprintf(output, "Найдены две матрицы с одинаковой суммой элементов = %d\n\n", new_sum);
+                print_matrix_to_file(output, matrices[i], m, "Матрица 1");
+                print_matrix_to_file(output, new_mat, m, "Матрица 2");
+                found = 1;
+                break;
+            }
+        }
+        if (found) {
+            free_matrix(new_mat, m);
+            break;
+        }
+
     return 0;
 }
