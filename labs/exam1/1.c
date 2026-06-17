@@ -83,6 +83,8 @@ void free_matrix(int** mat, int m) {
 int main() {
     clock_t start_time = clock();
 
+    srand(time(NULL));
+
 
     return 0;
 }
