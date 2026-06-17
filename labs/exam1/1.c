@@ -74,3 +74,8 @@ void print_matrix_to_file(FILE* f, int** mat, int m, const char* name) {
     }
     fprintf(f, "\n");
 }
+
+void free_matrix(int** mat, int m) {
+    for (int i = 0; i < m; i++) free(mat[i]);
+    free(mat);
+}
