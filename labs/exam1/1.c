@@ -137,6 +137,14 @@ int main() {
             free_matrix(new_mat, m);
             break;
         }
+        count++;
+        matrices = (int***)realloc(matrices, count * sizeof(int**));
+        sums = (int*)realloc(sums, count * sizeof(int));
+        matrices[count - 1] = new_mat;
+        sums[count - 1] = new_sum;
+    }
+
+    fclose(output);
 
     return 0;
 }
