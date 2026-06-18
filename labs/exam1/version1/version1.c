@@ -66,7 +66,7 @@ int sum_matrix(int** mat, int m) {
 }
 
 void print_matrix_to_file(FILE* f, int** mat, int m, const char* name) {
-    fprintf(f, "%s:\n", name);
+    fprintf(f, "%s", name);
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < m; j++) {
             fprintf(f, "%d ", mat[i][j]);
@@ -74,6 +74,17 @@ void print_matrix_to_file(FILE* f, int** mat, int m, const char* name) {
         fprintf(f, "\n");
     }
     fprintf(f, "\n");
+}
+
+void print_matrix_console(int** mat, int m, const char* name) {
+    printf("%s", name);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
 }
 
 void free_matrix(int** mat, int m) {
@@ -114,7 +125,6 @@ int main() {
     int count = 0;
     int found = 0;
 
-
     FILE* output = fopen("output.txt", "w");
     if (!output) {
         printf("Error: couldn't create output.txt\n");
@@ -128,9 +138,17 @@ int main() {
         int new_sum = sum_matrix(new_mat, m);
         for (int i = 0; i < count; i++) {
             if (sums[i] == new_sum) {
+                printf("\nFound 2 matrices with the same sum of elements = %d\n", new_sum);
+                
                 fprintf(output, "Found 2 matrices with the same sum of elements = %d\n\n", new_sum);
                 print_matrix_to_file(output, matrices[i], m, "Matrix 1");
                 print_matrix_to_file(output, new_mat, m, "Matrix 2");
+                
+                printf("Matrix 1 (sum = %d):\n", new_sum);
+                print_matrix_console(matrices[i], m, "");
+                printf("Matrix 2 (sum = %d):\n", new_sum);
+                print_matrix_console(new_mat, m, "");
+                
                 found = 1;
                 break;
             }
@@ -156,7 +174,7 @@ int main() {
 
     QueryPerformanceCounter(&end_time);
     double elapsed = (double)(end_time.QuadPart - start_time.QuadPart) / frequency.QuadPart;
-    printf("Time: %.6f seconds\n", elapsed);
+    printf("\nTime: %.6f seconds\n", elapsed);
 
     system("pause");
 
