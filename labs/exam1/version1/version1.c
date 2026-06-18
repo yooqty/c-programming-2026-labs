@@ -118,7 +118,7 @@ int main() {
     printf("Until date %02d.%02d.%04d days left: %d\n", day, month, year, days_left);
 
     int m;
-    printf("Enter the size of the matrix: ");
+    printf("\nEnter the size of the matrix: ");
     scanf("%d", &m);
     printf("\nSize of the matrix m = %d\n", m);
 
