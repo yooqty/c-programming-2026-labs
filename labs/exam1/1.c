@@ -154,9 +154,11 @@ int main() {
     free(matrices);
     free(sums);
 
-    clock_t end_time = clock();
-    double elapsed = (double)(end_time - start_time) / CLOCKS_PER_SEC;
-    printf("Time: %.6f секунд\n", elapsed);
+    QueryPerformanceCounter(&end_time);
+    double elapsed = (double)(end_time.QuadPart - start_time.QuadPart) / frequency.QuadPart;
+    printf("Time: %.6f seconds\n", elapsed);
+
+    system("pause");
 
     return 0;
 }
