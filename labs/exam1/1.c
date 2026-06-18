@@ -85,6 +85,8 @@ int main() {
     QueryPerformanceFrequency(&frequency);
     QueryPerformanceCounter(&start_time);
 
+    srand((unsigned int)time(NULL));
+
     FILE* input = fopen("input.txt", "r");
     if (!input) {
         printf("Error: couldn't find input.txt.\n");
