@@ -118,7 +118,7 @@ int main() {
     printf("Until date %02d.%02d.%04d days left: %d\n", day, month, year, days_left);
 
     int m = 4;
-    printf("Size of the matrix m = %d\n", m);
+    printf("\nSize of the matrix m = %d\n", m);
 
     int*** matrices = NULL;
     int* sums = NULL;
@@ -144,9 +144,9 @@ int main() {
                 print_matrix_to_file(output, matrices[i], m, "Matrix 1");
                 print_matrix_to_file(output, new_mat, m, "Matrix 2");
                 
-                printf("Matrix 1 (sum = %d):\n", new_sum);
+                printf("\nMatrix 1:\n", new_sum);
                 print_matrix_console(matrices[i], m, "");
-                printf("Matrix 2 (sum = %d):\n", new_sum);
+                printf("Matrix 2:\n", new_sum);
                 print_matrix_console(new_mat, m, "");
                 
                 found = 1;
