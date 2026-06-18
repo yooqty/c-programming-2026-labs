@@ -117,7 +117,9 @@ int main() {
 
     printf("Until date %02d.%02d.%04d days left: %d\n", day, month, year, days_left);
 
-    int m = 4;
+    int m;
+    printf("Enter the size of the matrix: ");
+    scanf("%d", &m);
     printf("\nSize of the matrix m = %d\n", m);
 
     int*** matrices = NULL;
@@ -141,8 +143,8 @@ int main() {
                 printf("\nFound 2 matrices with the same sum of elements = %d\n", new_sum);
                 
                 fprintf(output, "Found 2 matrices with the same sum of elements = %d\n\n", new_sum);
-                print_matrix_to_file(output, matrices[i], m, "Matrix 1");
-                print_matrix_to_file(output, new_mat, m, "Matrix 2");
+                print_matrix_to_file(output, matrices[i], m, "Matrix 1:\n");
+                print_matrix_to_file(output, new_mat, m, "Matrix 2:\n");
                 
                 printf("\nMatrix 1:\n", new_sum);
                 print_matrix_console(matrices[i], m, "");
