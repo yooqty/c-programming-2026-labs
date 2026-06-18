@@ -81,9 +81,9 @@ void free_matrix(int** mat, int m) {
 }
 
 int main() {
-    clock_t start_time = clock();
-
-    srand(time(NULL));
+    LARGE_INTEGER frequency, start_time, end_time;
+    QueryPerformanceFrequency(&frequency);
+    QueryPerformanceCounter(&start_time);
 
     FILE* input = fopen("input.txt", "r");
     if (!input) {
