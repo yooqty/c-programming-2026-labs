@@ -83,3 +83,15 @@ void findMinElement(int** mat, int rows, int cols, int* minRow, int* minCol) {
         }
     }
 }
+
+int countOddNumbers(int** mat, int rows, int cols) {
+    int count = 0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (mat[i][j] % 2 != 0) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
