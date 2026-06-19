@@ -95,3 +95,25 @@ int countOddNumbers(int** mat, int rows, int cols) {
     }
     return count;
 }
+
+int hasDuplicateInRowOrCol(int** mat, int size) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            for (int k = j + 1; k < size; k++) {
+                if (mat[i][j] == mat[i][k]) {
+                    return 1;
+                }
+            }
+        }
+    }
+    for (int j = 0; j < size; j++) {
+        for (int i = 0; i < size; i++) {
+            for (int k = i + 1; k < size; k++) {
+                if (mat[i][j] == mat[k][j]) {
+                    return 1;
+                }
+            }
+        }
+    }
+    return 0;
+}
