@@ -68,3 +68,18 @@ int** addMatrices(int** A, int** B, int size) {
     }
     return result;
 }
+
+void findMinElement(int** mat, int rows, int cols, int* minRow, int* minCol) {
+    *minRow = 0;
+    *minCol = 0;
+    int minVal = mat[0][0];
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (mat[i][j] < minVal) {
+                minVal = mat[i][j];
+                *minRow = i;
+                *minCol = j;
+            }
+        }
+    }
+}
