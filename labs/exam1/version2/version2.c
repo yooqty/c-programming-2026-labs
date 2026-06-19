@@ -9,3 +9,10 @@ int** allocateMatrix(int rows, int cols) {
     }
     return mat;
 }
+
+void freeMatrix(int** mat, int rows) {
+    for (int i = 0; i < rows; i++) {
+        free(mat[i]);
+    }
+    free(mat);
+}
