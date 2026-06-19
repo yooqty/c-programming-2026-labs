@@ -16,3 +16,11 @@ void freeMatrix(int** mat, int rows) {
     }
     free(mat);
 }
+
+void fillRandom(int** mat, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            mat[i][j] = rand() % 10;
+        }
+    }
+}
