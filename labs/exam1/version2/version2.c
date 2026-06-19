@@ -58,3 +58,13 @@ int** multiplyMatrices(int** A, int** B, int size) {
     }
     return result;
 }
+
+int** addMatrices(int** A, int** B, int size) {
+    int** result = allocateMatrix(size, size);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            result[i][j] = A[i][j] + B[i][j];
+        }
+    }
+    return result;
+}
