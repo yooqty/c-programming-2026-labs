@@ -126,6 +126,16 @@ int main() {
 
     srand(time(NULL));
 
+    int size;
+    printf("Enter matrix size (N x N): ");
+    scanf("%d", &size);
+
+    FILE* inputFile = fopen("input.txt", "w");
+    if (inputFile == NULL) {
+        printf("Error creating input.txt\n");
+        return 1;
+    }
+
 
 
     return 0;
