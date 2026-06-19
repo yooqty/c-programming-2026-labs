@@ -136,6 +136,26 @@ int main() {
         return 1;
     }
 
+    int** matrix1 = allocateMatrix(size, size);
+    int** matrix2 = allocateMatrix(size, size);
+
+    fillRandom(matrix1, size, size);
+    fillRandom(matrix2, size, size);
+
+    writeMatrix(inputFile, matrix1, size, size, "Matrix 1");
+    writeMatrix(inputFile, matrix2, size, size, "Matrix 2");
+
+    fclose(inputFile);
+
+    freeMatrix(matrix1, size);
+    freeMatrix(matrix2, size);
+
+    inputFile = fopen("input.txt", "r");
+    if (inputFile == NULL) {
+        printf("Error opening input.txt\n");
+        return 1;
+    }
+
 
 
     return 0;
