@@ -191,6 +191,22 @@ int main() {
     int hasDup1 = hasDuplicateInRowOrCol(matrix1, size);
     int hasDup2 = hasDuplicateInRowOrCol(matrix2, size);
 
+    if (hasDup1) {
+        fprintf(outputFile, "Matrix 1 has identical numbers in a row or column:\n");
+        writeMatrix(outputFile, matrix1, size, size, "Matrix 1");
+    } else {
+        fprintf(outputFile, "Matrix 1 does not have identical numbers in a row or column\n");
+    }
+
+    if (hasDup2) {
+        fprintf(outputFile, "Matrix 2 has identical numbers in a row or column:\n");
+        writeMatrix(outputFile, matrix2, size, size, "Matrix 2");
+    } else {
+        fprintf(outputFile, "Matrix 2 does not have identical numbers in a row or column\n");
+    }
+
+    fclose(outputFile);
+
 
 
     return 0;
