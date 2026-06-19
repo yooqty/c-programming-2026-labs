@@ -207,7 +207,15 @@ int main() {
 
     fclose(outputFile);
 
+    freeMatrix(matrix1, size);
+    freeMatrix(matrix2, size);
+    freeMatrix(multResult, size);
+    freeMatrix(addResult, size);
 
+    end = clock();
+    cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+    printf("Program execution time: %f seconds\n", cpu_time_used);
 
     return 0;
 }
