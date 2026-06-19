@@ -185,7 +185,7 @@ int main() {
     findMinElement(matrix1, size, size, &minRow, &minCol);
     int oddCount = countOddNumbers(matrix1, size, size);
 
-    fprintf(outputFile, "Minimum element in Matrix 1: [%d][%d] = %d\n", minRow, minCol, matrix1[minRow][minCol]);
+    fprintf(outputFile, "Minimum element in Matrix 1: [%d][%d] = %d\n", minRow + 1, minCol + 1, matrix1[minRow][minCol]);
     fprintf(outputFile, "Number of odd numbers in Matrix 1: %d\n\n", oddCount);
 
     int hasDup1 = hasDuplicateInRowOrCol(matrix1, size);
