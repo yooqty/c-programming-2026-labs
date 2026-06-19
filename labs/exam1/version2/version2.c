@@ -181,6 +181,16 @@ int main() {
     writeMatrix(outputFile, multResult, size, size, "Multiplication result (A * B)");
     writeMatrix(outputFile, addResult, size, size, "Addition result (A + B)");
 
+    int minRow, minCol;
+    findMinElement(matrix1, size, size, &minRow, &minCol);
+    int oddCount = countOddNumbers(matrix1, size, size);
+
+    fprintf(outputFile, "Minimum element in Matrix 1: [%d][%d] = %d\n", minRow, minCol, matrix1[minRow][minCol]);
+    fprintf(outputFile, "Number of odd numbers in Matrix 1: %d\n\n", oddCount);
+
+    int hasDup1 = hasDuplicateInRowOrCol(matrix1, size);
+    int hasDup2 = hasDuplicateInRowOrCol(matrix2, size);
+
 
 
     return 0;
