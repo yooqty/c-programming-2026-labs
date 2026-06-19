@@ -119,8 +119,10 @@ int hasDuplicateInRowOrCol(int** mat, int size) {
 }
 
 int main() {
+    clock_t start, end;
+    double cpu_time_used;
 
-    
+
 
     return 0;
 }
