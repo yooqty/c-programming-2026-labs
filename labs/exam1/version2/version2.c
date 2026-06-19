@@ -122,6 +122,10 @@ int main() {
     clock_t start, end;
     double cpu_time_used;
 
+    start = clock();
+
+    srand(time(NULL));
+
 
 
     return 0;
