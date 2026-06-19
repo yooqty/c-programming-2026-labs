@@ -117,3 +117,10 @@ int hasDuplicateInRowOrCol(int** mat, int size) {
     }
     return 0;
 }
+
+int main() {
+
+    
+
+    return 0;
+}
