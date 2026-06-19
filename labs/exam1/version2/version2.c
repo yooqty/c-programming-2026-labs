@@ -156,6 +156,17 @@ int main() {
         return 1;
     }
 
+    char buffer[100];
+    fscanf(inputFile, "%s", buffer);
+    fscanf(inputFile, "%s", buffer);
+    matrix1 = readMatrix(inputFile, size, size);
+
+    fscanf(inputFile, "%s", buffer);
+    fscanf(inputFile, "%s", buffer);
+    matrix2 = readMatrix(inputFile, size, size);
+
+    fclose(inputFile);
+
 
 
     return 0;
