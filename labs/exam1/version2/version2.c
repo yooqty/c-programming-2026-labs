@@ -35,3 +35,13 @@ void writeMatrix(FILE* file, int** mat, int rows, int cols, const char* name) {
     }
     fprintf(file, "\n");
 }
+
+int** readMatrix(FILE* file, int rows, int cols) {
+    int** mat = allocateMatrix(rows, cols);
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            fscanf(file, "%d", &mat[i][j]);
+        }
+    }
+    return mat;
+}
