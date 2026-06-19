@@ -24,3 +24,14 @@ void fillRandom(int** mat, int rows, int cols) {
         }
     }
 }
+
+void writeMatrix(FILE* file, int** mat, int rows, int cols, const char* name) {
+    fprintf(file, "%s:\n", name);
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            fprintf(file, "%d ", mat[i][j]);
+        }
+        fprintf(file, "\n");
+    }
+    fprintf(file, "\n");
+}
