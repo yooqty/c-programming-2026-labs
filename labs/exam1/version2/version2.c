@@ -178,8 +178,8 @@ int main() {
 
     writeMatrix(outputFile, matrix1, size, size, "Matrix 1");
     writeMatrix(outputFile, matrix2, size, size, "Matrix 2");
-    writeMatrix(outputFile, multResult, size, size, "Multiplication result (A * B)");
-    writeMatrix(outputFile, addResult, size, size, "Addition result (A + B)");
+    writeMatrix(outputFile, multResult, size, size, "Multiplication result");
+    writeMatrix(outputFile, addResult, size, size, "Addition result");
 
     int minRow, minCol;
     findMinElement(matrix1, size, size, &minRow, &minCol);
