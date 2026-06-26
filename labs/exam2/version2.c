@@ -224,7 +224,6 @@ int main() {
     }
     fprintf(outputFile, "\n");
 
-    // Step 4: Find minimum element and count odd numbers in matrix1
     int minRow, minCol;
     findMinElement(matrix1, size, size, &minRow, &minCol);
     int oddCount = countOddNumbers(matrix1, size, size);
