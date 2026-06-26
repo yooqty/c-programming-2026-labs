@@ -209,7 +209,6 @@ int main() {
         return 1;
     }
 
-    // Write original matrices and results to output.txt
     writeMatrix(outputFile, matrix1, size, size, "Matrix 1 (original)");
     writeMatrix(outputFile, matrix2, size, size, "Matrix 2 (original)");
     writeMatrix(outputFile, multResult, size, size, "Multiplication result");
