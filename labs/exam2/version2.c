@@ -82,7 +82,7 @@ void swapPairsInMatrix(int** mat, int rows, int cols) {
         }
     }
     
-    // Swap pairs: (0,1), (2,3), (4,5), ...
+    // Swap pairs
     for (int i = 0; i < totalElements - 1; i += 2) {
         int temp = flat[i];
         flat[i] = flat[i + 1];
