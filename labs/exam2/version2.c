@@ -163,7 +163,6 @@ int main() {
     printf("Enter matrix size (N x N): ");
     scanf("%d", &size);
 
-    // Step 1: Create input.txt with 2 random matrices
     FILE* inputFile = fopen("input.txt", "w");
     if (inputFile == NULL) {
         printf("Error creating input.txt\n");
