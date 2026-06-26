@@ -256,7 +256,6 @@ int main() {
     freeMatrix(multResult, size);
     freeMatrix(addResult, size);
 
-    // Step 6: Measure and display execution time
     end = clock();
     cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
 
