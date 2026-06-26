@@ -183,7 +183,6 @@ int main() {
     freeMatrix(matrix1, size);
     freeMatrix(matrix2, size);
 
-    // Step 2: Open input.txt, read matrices, multiply and add
     inputFile = fopen("input.txt", "r");
     if (inputFile == NULL) {
         printf("Error opening input.txt\n");
