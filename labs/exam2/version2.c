@@ -250,7 +250,7 @@ int main() {
 
     fclose(outputFile);
 
-    // Clean up
+
     freeMatrix(matrix1, size);
     freeMatrix(matrix2, size);
     freeMatrix(multResult, size);
