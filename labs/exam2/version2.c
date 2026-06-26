@@ -180,7 +180,6 @@ int main() {
 
     fclose(inputFile);
 
-    // Free arrays (as per step 1: "Отчислить массивы")
     freeMatrix(matrix1, size);
     freeMatrix(matrix2, size);
 
