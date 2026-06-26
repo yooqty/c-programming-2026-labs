@@ -203,7 +203,6 @@ int main() {
     int** multResult = multiplyMatrices(matrix1, matrix2, size);
     int** addResult = addMatrices(matrix1, matrix2, size);
 
-    // Open output.txt
     FILE* outputFile = fopen("output.txt", "w");
     if (outputFile == NULL) {
         printf("Error creating output.txt\n");
