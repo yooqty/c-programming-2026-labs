@@ -214,7 +214,6 @@ int main() {
     writeMatrix(outputFile, multResult, size, size, "Multiplication result");
     writeMatrix(outputFile, addResult, size, size, "Addition result");
 
-    // Step 3: Swap pairs in matrix1 (1 and 2, 3 and 4, 5 and 6, etc.)
     swapPairsInMatrix(matrix1, size, size);
     fprintf(outputFile, "Matrix 1 after swapping pairs (1-2, 3-4, 5-6, etc.):\n");
     for (int i = 0; i < size; i++) {
