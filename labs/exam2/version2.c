@@ -11,7 +11,8 @@
 
 int** allocateMatrix(int rows, int cols) {
     int** mat = (int**)malloc(rows * sizeof(int*));
-    for (int i = 0; i < rows; i++) {
+    int i;
+    for (i = 0; i < rows; i++) {
         mat[i] = (int*)malloc(cols * sizeof(int));
     }
     return mat;
