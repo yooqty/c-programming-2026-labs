@@ -26,7 +26,8 @@ void freeMatrix(int** mat, int rows) {
 }
 
 void fillRandom(int** mat, int rows, int cols) {
-    for (int i = 0; i < rows; i++) {
+    int i;
+    for (i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             mat[i][j] = rand() % 10;
         }
