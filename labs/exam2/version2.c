@@ -97,7 +97,7 @@ void swapPairsInMatrix(int** mat, int rows, int cols) {
     }
     
     // Swap pairs
-    for (int i = 0; i < totalElements - 1; i += 2) {
+    for (i = 0; i < totalElements - 1; i += 2) {
         int temp = flat[i];
         flat[i] = flat[i + 1];
         flat[i + 1] = temp;
@@ -105,8 +105,8 @@ void swapPairsInMatrix(int** mat, int rows, int cols) {
     
     // Copy back from flat array to matrix
     index = 0;
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
             mat[i][j] = flat[index++];
         }
     }
