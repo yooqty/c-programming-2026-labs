@@ -48,8 +48,9 @@ void writeMatrix(FILE* file, int** mat, int rows, int cols, const char* name) {
 
 int** readMatrix(FILE* file, int rows, int cols) {
     int** mat = allocateMatrix(rows, cols);
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    int i,j;
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
             fscanf(file, "%d", &mat[i][j]);
         }
     }
