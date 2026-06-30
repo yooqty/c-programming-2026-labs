@@ -233,8 +233,9 @@ int main() {
 
     swapPairsInMatrix(matrix1, size, size);
     fprintf(outputFile, "Matrix 1 after swapping pairs (1-2, 3-4, 5-6, etc.):\n");
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
+    int i,j;
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
             fprintf(outputFile, "%d ", matrix1[i][j]);
         }
         fprintf(outputFile, "\n");
