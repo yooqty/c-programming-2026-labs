@@ -59,10 +59,11 @@ int** readMatrix(FILE* file, int rows, int cols) {
 
 int** multiplyMatrices(int** A, int** B, int size) {
     int** result = allocateMatrix(size, size);
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
+    int i,j,k;
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
             result[i][j] = 0;
-            for (int k = 0; k < size; k++) {
+            for (k = 0; k < size; k++) {
                 result[i][j] += A[i][k] * B[k][j];
             }
         }
