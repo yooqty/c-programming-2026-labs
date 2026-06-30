@@ -18,7 +18,8 @@ int** allocateMatrix(int rows, int cols) {
 }
 
 void freeMatrix(int** mat, int rows) {
-    for (int i = 0; i < rows; i++) {
+    int i;
+    for (i = 0; i < rows; i++) {
         free(mat[i]);
     }
     free(mat);
