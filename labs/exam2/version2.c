@@ -118,8 +118,9 @@ void findMinElement(int** mat, int rows, int cols, int* minRow, int* minCol) {
     *minRow = 0;
     *minCol = 0;
     int minVal = mat[0][0];
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    int i,j;
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
             if (mat[i][j] < minVal) {
                 minVal = mat[i][j];
                 *minRow = i;
