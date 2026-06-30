@@ -145,9 +145,10 @@ int countOddNumbers(int** mat, int rows, int cols) {
 
 int hasDuplicateInRowOrCol(int** mat, int size) {
     // Check rows
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-            for (int k = j + 1; k < size; k++) {
+    int i,j,k;
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
+            for (k = j + 1; k < size; k++) {
                 if (mat[i][j] == mat[i][k]) {
                     return 1;
                 }
@@ -155,9 +156,9 @@ int hasDuplicateInRowOrCol(int** mat, int size) {
         }
     }
     // Check columns
-    for (int j = 0; j < size; j++) {
-        for (int i = 0; i < size; i++) {
-            for (int k = i + 1; k < size; k++) {
+    for (j = 0; j < size; j++) {
+        for (i = 0; i < size; i++) {
+            for (k = i + 1; k < size; k++) {
                 if (mat[i][j] == mat[k][j]) {
                     return 1;
                 }
