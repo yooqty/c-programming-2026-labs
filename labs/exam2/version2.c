@@ -89,8 +89,9 @@ void swapPairsInMatrix(int** mat, int rows, int cols) {
     int index = 0;
     
     // Copy matrix to flat array
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    int i,j;
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
             flat[index++] = mat[i][j];
         }
     }
